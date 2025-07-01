@@ -1,0 +1,172 @@
+/* Weather App Custom Styles */
+
+body {
+    background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-info) 100%);
+    min-height: 100vh;
+}
+
+.weather-card {
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.weather-card .card-header {
+    background: rgba(var(--bs-primary-rgb), 0.1);
+    border-bottom: 1px solid rgba(var(--bs-border-color-rgb), 0.2);
+    padding: 1.5rem;
+}
+
+.weather-main {
+    padding: 1rem 0;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--bs-warning);
+    display: block;
+}
+
+.temperature {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--bs-primary);
+}
+
+.condition {
+    font-size: 1.2rem;
+    color: var(--bs-secondary);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    padding: 1rem 0;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.detail-item:hover {
+    background: rgba(var(--bs-secondary-rgb), 0.1);
+}
+
+.detail-item i {
+    width: 24px;
+    margin-right: 0.75rem;
+    color: var(--bs-info);
+    font-size: 1.1rem;
+}
+
+.detail-item .label {
+    font-weight: 500;
+    margin-right: 0.5rem;
+    min-width: 80px;
+}
+
+.detail-item .value {
+    font-weight: 600;
+    color: var(--bs-emphasis-color);
+}
+
+.additional-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(var(--bs-border-color-rgb), 0.2);
+}
+
+.info-badge {
+    background: rgba(var(--bs-info-rgb), 0.1);
+    color: var(--bs-info);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(var(--bs-info-rgb), 0.2);
+}
+
+.info-badge i {
+    margin-right: 0.5rem;
+}
+
+/* Search form enhancements */
+.input-group .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--bs-primary), var(--bs-info));
+    border: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--bs-info), var(--bs-primary));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.3);
+}
+
+/* Loading indicator */
+#loadingIndicator .card {
+    border: 2px dashed var(--bs-primary);
+    background: rgba(var(--bs-primary-rgb), 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .temperature {
+        font-size: 2.5rem;
+    }
+    
+    .weather-icon {
+        font-size: 3rem;
+    }
+    
+    .detail-item {
+        font-size: 0.9rem;
+    }
+    
+    .additional-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Alert enhancements */
+.alert {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.display-4 {
+    background: linear-gradient(45deg, var(--bs-primary), var(--bs-info));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
